@@ -12,9 +12,10 @@ public class 反转链表 {
          */
         sout(head);
         System.out.println();
-            sout(reverseDiGui(head));
+        //   sout(reverseDiGui(head));
+      //  sout(reverseXinJianLianBiao(head));
 //sout(reverseZhan(head));
-
+sout(reverseDieDaiFa(head));
         //  sout(reverseZhan1(head));
 
 
@@ -39,12 +40,13 @@ public class 反转链表 {
             head = head.next;
         }
     }
-    //todo 递归实现
+
 
     /****
      * @param head
      * @return 反序列的链表
      * 思路： 倒着赋值;递归的特性
+     * 把一个链表前后分开，后面是倒序过后的链表
      */
     public static Node reverseDiGui(Node head) {
         if (head==null||head.next==null)return head;//递归的返回条件为空就返
@@ -90,7 +92,7 @@ public class 反转链表 {
      *  temp💥记录重新赋值的链表的头节点位置，不然返回值不能操作（输出本质还是一次遍历） 这不会导致无法输出
      */
     public static Node reverseZhan1(Node head) {
-        //todo 栈中node模式的链表
+
         Stack<Node> stack = new Stack<>();
         //压栈     1.把链表中的节点入栈
         while (head != null) {
@@ -108,13 +110,41 @@ public class 反转链表 {
         return head;
 
     }
+    /***
+     *新建链表法
+     * 把链表每次循坏要处理的后节点（head.next一串）保存下到新节点（temp）后
+     * 然后做交换
+     * 把后节点还回来
+     * @param head
+     * @return
+     */
 
-
-
-
-    //todo 新建链表法;遍历单链表中的每一个节点，一个一个进行链接，如下图所示：
-
-//    public static Node reverseXinJianLianBiao(Node head) {
-//    }
+    public static Node reverseXinJianLianBiao(Node head) {
+        Node rehead=null;
+        while (head!=null) {
+            Node temp = head.next;//把要取出的节点的后节点保存
+            head.next=rehead;//把要取出的节点的后节点断开
+            rehead=head;//给新结点赋值
+            head=temp;//还回来后节点
+        }
+        return rehead;
+    }
     //todo 迭代法
+    /***
+     * curr 指向链表的当前节点，next 保存curr节点的下一个节点
+     * （因为是单链表，不保存的话，改变方向之后就找不到旧节点的下个节点了）
+     *，prev刚开始值为空，保存当前节点的前一个节点。
+     * 等同于新建链表
+     */
+    public static Node reverseDieDaiFa(Node head){
+        Node prev=null;
+        while (head!=null) {
+
+            Node next = head.next;
+            head.next=prev;
+            prev=head;
+            head=next;
+        }
+        return prev;
+    }
 }
