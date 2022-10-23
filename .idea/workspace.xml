@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e2e5f30-eb67-479a-adc5-cabc7ed1393c" name="变更" comment="集合类实战操作：&#10;新增其他大坑" />
+    <list default="true" id="4e2e5f30-eb67-479a-adc5-cabc7ed1393c" name="变更" comment="集合类实战操作：&#10;新增其他大坑">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/字符串匹配.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/字符串匹配.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,9 +38,16 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
   }
 }</component>
-  <component name="RunManager" selected="应用程序.Main">
+  <component name="RunManager" selected="应用程序.字符串匹配">
     <configuration name="反转链表" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="反转链表" />
+      <module name="JiHeLeiShiZhan" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="字符串匹配" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="字符串匹配" />
       <module name="JiHeLeiShiZhan" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -52,6 +62,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.字符串匹配" />
         <item itemvalue="应用程序.反转链表" />
         <item itemvalue="应用程序.Main" />
       </list>
@@ -72,6 +83,7 @@
       <workItem from="1666354507283" duration="666000" />
       <workItem from="1666355270531" duration="681000" />
       <workItem from="1666488839734" duration="15904000" />
+      <workItem from="1666527667194" duration="7816000" />
     </task>
     <task id="LOCAL-00001" summary="集合类实战操作：&#10;反转链表： 关于栈方法的两种操作&#10;踩的坑： 1.返回值返回的是尾节点，没有使用一个新节点记录新链表头节点的位置&#10;2.栈（Node）操作中；每次pop出的都是一个链表，操作时要直接在后节点覆盖。（while循坏出来的链表最后一个节点也是个链表带了一大串，要记得给制空去掉，不然会死循坏！！）">
       <created>1666315012206</created>
@@ -101,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666514454554</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="集合类实战操作：&#10;新增其他大坑">
+      <created>1666527676424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666527676424</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +231,21 @@
           <url>file://$PROJECT_DIR$/src/反转链表.java</url>
           <line>145</line>
           <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/字符串匹配.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/字符串匹配.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/字符串匹配.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
