@@ -2,13 +2,13 @@ import java.util.Arrays;
 
 public class 字符串匹配 {
     //todo 暴力解法 挨个匹配
-    //todo  kmp算法 精髓next数组
+
     public static void main(String[] args) {
         char[] sun = "ababaaababaa".toCharArray();
-        char[] father="werawrfababaaaababaaadaababaaababaaggasd".toCharArray();
+        char[] father = "werawrfababaaaababaaadaababaaababaaggasd".toCharArray();
         System.out.println(Arrays.toString(next(sun)));
         System.out.println(KMP(next(sun), sun, father));
-        char[] test="abdababy".toCharArray();
+        char[] test = "abdababy".toCharArray();
         System.out.println(Arrays.toString(next(test)));
     }
 
@@ -21,8 +21,8 @@ public class 字符串匹配 {
      * 直到找到某个位上内容的next值对应的内容与前一位相等为止，则这个位对应的值加上1即为需求的next值；
      * 如果找到第一位都没有找到与前一位相等的内容，那么需求的位上的next值即为1。
      *
-     * @param sun
-     * @return
+     * @param sun 要使用next算法处理的字串
+     * @return 处理好的字串的next值
      */
     public static int[] next(char[] sun) {
         int[] next = new int[sun.length];
@@ -43,17 +43,27 @@ public class 字符串匹配 {
         }
         return next;
     }
-    public  static  boolean KMP(int[] next,char[] sun,char[] father){
-        int i=0;int j=0;
-        while (i< father.length){
-            if(father[i]==sun[j]){
+
+    /***
+     * KMP算法
+     * @param next 处理好的next数组
+     * @param sun   子串
+     * @param father 父串
+     * @return 是否匹配
+     */
+    public static boolean KMP(int[] next, char[] sun, char[] father) {
+        int i = 0;
+        int j = 0;
+        while (i < father.length) {
+            if (father[i] == sun[j]) {
                 i++;
                 j++;
-            } else{
-                if (j==0){
-                    i++;}
-                else j=next[j-1];//回溯的值是对应next数组的前一位！
+            } else {
+                if (j == 0) {
+                    i++;
+                } else j = next[j - 1];//回溯的值是对应next数组的前一位！
                 /**
+                 * 解释：j = next[j - 1];
                  * 目标串S：abdababxqweqwer
                  * 模式串T：abdababy
                  * 对应next[0, 1, 1, 1, 2, 3, 2, 3]
@@ -61,8 +71,8 @@ public class 字符串匹配 {
                  * abdababxqweqwer
                  * 11111abdababy    💥   j=7时：x！=y 重赋值时 j=2  sun[2]=d此时：j=next[j-1]=>j=next[7-1]=>j=2.
                  */
-        }
-           if (j== sun.length)return true;
+            }
+            if (j == sun.length) return true;
         }
         return false;
     }
