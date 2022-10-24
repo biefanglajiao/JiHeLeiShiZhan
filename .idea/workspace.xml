@@ -60,11 +60,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="字符串匹配" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="字符串匹配" />
+      <module name="JiHeLeiShiZhan" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="字符串匹配" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="字符串匹配" />
+      <module name="JiHeLeiShiZhan" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.字符串匹配" />
-        <item itemvalue="应用程序.反转链表" />
         <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.反转链表" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +97,9 @@
       <workItem from="1666354507283" duration="666000" />
       <workItem from="1666355270531" duration="681000" />
       <workItem from="1666488839734" duration="15904000" />
-      <workItem from="1666527667194" duration="8261000" />
+      <workItem from="1666527667194" duration="8930000" />
+      <workItem from="1666538268745" duration="745000" />
+      <workItem from="1666591933581" duration="994000" />
     </task>
     <task id="LOCAL-00001" summary="集合类实战操作：&#10;反转链表： 关于栈方法的两种操作&#10;踩的坑： 1.返回值返回的是尾节点，没有使用一个新节点记录新链表头节点的位置&#10;2.栈（Node）操作中；每次pop出的都是一个链表，操作时要直接在后节点覆盖。（while循坏出来的链表最后一个节点也是个链表带了一大串，要记得给制空去掉，不然会死循坏！！）">
       <created>1666315012206</created>
@@ -127,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666536388441</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="集合类实战操作：&#10;新增KMP算法的字符串匹配：&#10;坑：（爆炸点）next求值时：向前继续寻找next值对应的内容来与前一位进行比较，  //向前寻找（next数组前移一位）不是类推！！！！！&#10;KMP算法时：//回溯的值是对应next数组的前一位！">
+      <created>1666536672485</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666536672485</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,6 +262,16 @@
           <url>file://$PROJECT_DIR$/src/反转链表.java</url>
           <line>145</line>
           <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/字符串匹配.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/字符串匹配.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="59" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

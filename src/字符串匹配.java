@@ -4,12 +4,15 @@ public class 字符串匹配 {
     //todo 暴力解法 挨个匹配
 
     public static void main(String[] args) {
-        char[] sun = "ababaaababaa".toCharArray();
-        char[] father = "werawrfababaaaababaaadaababaaababaaggasd".toCharArray();
-        System.out.println(Arrays.toString(next(sun)));
-        System.out.println(KMP(next(sun), sun, father));
-        char[] test = "abdababy".toCharArray();
+//        char[] sun = "ababaaababaa".toCharArray();
+//        char[] father = "werawrfababaaaababaaadaababaaababaaggasd".toCharArray();
+//        System.out.println(Arrays.toString(next(sun)));
+//        System.out.println(KMP(next(sun), sun, father));
+       char[] test = "aaaa".toCharArray();
+        char[] test1 = "aaabcaaaa".toCharArray();
         System.out.println(Arrays.toString(next(test)));
+        System.out.println(KMP(next(test), test, test1));
+        System.out.println(BaoLi(test, test1));
     }
 
     /****
@@ -73,6 +76,21 @@ public class 字符串匹配 {
                  */
             }
             if (j == sun.length) return true;
+        }
+        return false;
+    }
+    public static boolean BaoLi(char[] sun , char[] father){
+        int i = 0;
+        int j = 0;
+        while (i < father.length) {
+            if (father[i] == sun[j]) {
+                i++;
+                j++;
+            }else {
+                j=0;
+                i++;
+            }
+            if (j== sun.length)return true;
         }
         return false;
     }
